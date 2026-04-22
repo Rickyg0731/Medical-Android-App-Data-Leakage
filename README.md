@@ -72,10 +72,12 @@ How to Run
        - --html -> Optional: output HTML report file path
        
 The tool will: 
-
-      •	Decompile the APK 
       
       •	Analyze the files 
+
+      • Determine potential leaks, permissions, third-party libraries, etc.
+
+      • Calculate risk score
       
       •	Generate results
 
