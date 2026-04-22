@@ -60,9 +60,17 @@ How to Run
       1.	Install APKTool 
      
       2.	Place your APK file in the project directory 
+
+      3. Decompile using APKTool
+       - apktool d app.apk -o output/
       
       3.	Run: python main.py
-
+       - main.py [-h] [--app APP] [--output OUTPUT] [--html HTML] directory
+       - -h -> Path to decompiled APK directory
+       - --app -> App name/identifier
+       - --output -> Output JSON file path
+       - --html -> Optional: output HTML report file path
+       
 The tool will: 
 
       •	Decompile the APK 
