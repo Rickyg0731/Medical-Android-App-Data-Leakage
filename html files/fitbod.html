@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Privacy Leak Report — Fitbod</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'IBM Plex Sans',sans-serif;background:#f0f4f8;color:#1a202c;min-height:100vh}
+    .header{background:#1a202c;color:#fff;padding:36px 48px;border-bottom:4px solid #e53e3e}
+    .header h1{font-size:22px;font-weight:700;margin-bottom:4px}
+    .header .subtitle{font-size:13px;color:#a0aec0;font-family:'IBM Plex Mono',monospace}
+    .risk-badge{display:inline-block;background:#e53e3e;color:#fff;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:13px;padding:4px 14px;border-radius:3px;margin-top:12px;letter-spacing:1px}
+    .container{max-width:1100px;margin:0 auto;padding:36px 24px}
+    .grid-top{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:16px;margin-bottom:28px}
+    .stat-card{background:#fff;border-radius:8px;padding:20px 24px;border-top:3px solid #e53e3e;box-shadow:0 1px 3px rgba(0,0,0,0.07)}
+    .stat-card .num{font-size:36px;font-weight:700;font-family:'IBM Plex Mono',monospace;color:#e53e3e}
+    .stat-card .label{font-size:12px;text-transform:uppercase;letter-spacing:1px;color:#718096;margin-top:2px}
+    .card{background:#fff;border-radius:8px;padding:24px 28px;margin-bottom:20px;box-shadow:0 1px 3px rgba(0,0,0,0.07)}
+    .card h2{font-size:14px;text-transform:uppercase;letter-spacing:1.2px;color:#718096;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid #edf2f7}
+    table{width:100%;border-collapse:collapse}
+    th{text-align:left;padding:10px 14px;background:#f7fafc;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#718096;border-bottom:2px solid #edf2f7}
+    .risk-summary{background:#fff5f5;border:2px solid #e53e3e40;border-radius:8px;padding:20px 28px;margin-bottom:20px;display:flex;align-items:center;gap:24px}
+    .risk-summary .big{font-size:48px;font-weight:700;font-family:'IBM Plex Mono',monospace;color:#e53e3e;line-height:1}
+    .risk-summary .detail{flex:1}
+    .risk-summary .detail h3{font-size:18px;color:#e53e3e;margin-bottom:4px}
+    .risk-summary .detail p{font-size:14px;color:#4a5568;line-height:1.6}
+    footer{text-align:center;font-size:12px;color:#a0aec0;padding:24px;font-family:'IBM Plex Mono',monospace}
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Android Privacy Leak Analysis</h1>
+    <div class="subtitle">Target: Fitbod &nbsp;·&nbsp; Generated: April 21, 2026 at 18:02</div>
+    <div class="risk-badge">RISK: HIGH</div>
+  </div>
+  <div class="container">
+    <div class="grid-top">
+      <div class="stat-card"><div class="num">27,377</div><div class="label">Files Scanned</div></div>
+      <div class="stat-card"><div class="num">6</div><div class="label">Potential Leaks</div></div>
+      <div class="stat-card"><div class="num">4</div><div class="label">3rd-Party Libraries</div></div>
+      <div class="stat-card"><div class="num">12</div><div class="label">Permissions Requested</div></div>
+    </div>
+    <div class="risk-summary">
+      <div class="big">38</div>
+      <div class="detail">
+        <h3>Risk Level: HIGH</h3>
+        <p>Score is calculated based on source/sink co-occurrences, external network endpoints, and embedded third-party tracking libraries.</p>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Potential Privacy Leaks</h2>
+      <table>
+        <thead><tr><th>Sensitive Source</th><th>Data Sink</th><th>Suspected Endpoint</th><th>File</th></tr></thead>
+        <tbody><tr style="background:#fff;"><td style="padding:10px 14px;border-bottom:1px solid #edf2f7;font-family:monospace;font-size:13px;color:#e53e3e;">getLatitude</td><td style="padding:10px 14px;border-bottom:1px solid #edf2f7;font-family:monospace;font-size:13px;color:#dd6b20;">HttpURLConnection</td><td style="padding:10px 14px;border-bottom:1px solid #edf2f7;font-size:13px;">—</td><td style="padding:10px 14px;border-bottom:1px solid #edf2f7;font-size:13px;color:#4a5568;">GraphRequest$Companion.smali</td></tr><tr style="background:#fafafa;"><td style="padding:10px 14px;border-bottom:1px solid #edf2f7;font-family:monospace;font-size:13px;color:#e53e3e;">getLatitude</td><td style="padding:10px 14px;border-bottom:1px solid #edf2f7;font-family:monospace;font-size:13px;color:#dd6b20;">URLConnection</td><td style="padding:10px 14px;border-bottom:1px solid #edf2f7;font-size:13px;">—</td><td style="padding:10px 14px;border-bottom:1px solid #edf2f7;font-size:13px;color:#4a5568;">GraphRequest$Companion.smali</td></tr><tr style="background:#fff;"><td style="padding:10px 14px;border-bottom:1px solid #edf2f7;font-family:monospace;font-size:13px;color:#e53e3e;">getLongitude</td><td style="padding:10px 14px;border-bottom:1px solid #edf2f7;font-family:monospace;font-size:13px;color:#dd6b20;">HttpURLConnection</td><td style="padding:10px 14px;border-bottom:1px solid #edf2f7;font-size:13px;">—</td><td style="padding:10px 14px;border-bottom:1px solid #edf2f7;font-size:13px;color:#4a5568;">GraphRequest$Companion.smali</td></tr><tr style="background:#fafafa;"><td style="padding:10px 14px;border-bottom:1px solid #edf2f7;font-family:monospace;font-size:13px;color:#e53e3e;">getLongitude</td><td style="padding:10px 14px;border-bottom:1px solid #edf2f7;font-family:monospace;font-size:13px;color:#dd6b20;">URLConnection</td><td style="padding:10px 14px;border-bottom:1px solid #edf2f7;font-size:13px;">—</td><td style="padding:10px 14px;border-bottom:1px solid #edf2f7;font-size:13px;color:#4a5568;">GraphRequest$Companion.smali</td></tr><tr style="background:#fff;"><td style="padding:10px 14px;border-bottom:1px solid #edf2f7;font-family:monospace;font-size:13px;color:#e53e3e;">getLatitude</td><td style="padding:10px 14px;border-bottom:1px solid #edf2f7;font-family:monospace;font-size:13px;color:#dd6b20;">FileOutputStream</td><td style="padding:10px 14px;border-bottom:1px solid #edf2f7;font-size:13px;">—</td><td style="padding:10px 14px;border-bottom:1px solid #edf2f7;font-size:13px;color:#4a5568;">ExifInterface.smali</td></tr><tr style="background:#fafafa;"><td style="padding:10px 14px;border-bottom:1px solid #edf2f7;font-family:monospace;font-size:13px;color:#e53e3e;">getLongitude</td><td style="padding:10px 14px;border-bottom:1px solid #edf2f7;font-family:monospace;font-size:13px;color:#dd6b20;">FileOutputStream</td><td style="padding:10px 14px;border-bottom:1px solid #edf2f7;font-size:13px;">—</td><td style="padding:10px 14px;border-bottom:1px solid #edf2f7;font-size:13px;color:#4a5568;">ExifInterface.smali</td></tr></tbody>
+      </table>
+    </div>
+    <div class="card"><h2>Third-Party Libraries Detected</h2><span style="display:inline-block;background:#6b46c115;color:#6b46c1;border:1px solid #6b46c140;border-radius:4px;padding:3px 10px;margin:3px;font-size:13px;font-family:monospace;">AdMob</span><span style="display:inline-block;background:#6b46c115;color:#6b46c1;border:1px solid #6b46c140;border-radius:4px;padding:3px 10px;margin:3px;font-size:13px;font-family:monospace;">Facebook SDK</span><span style="display:inline-block;background:#6b46c115;color:#6b46c1;border:1px solid #6b46c140;border-radius:4px;padding:3px 10px;margin:3px;font-size:13px;font-family:monospace;">Firebase Analytics</span><span style="display:inline-block;background:#6b46c115;color:#6b46c1;border:1px solid #6b46c140;border-radius:4px;padding:3px 10px;margin:3px;font-size:13px;font-family:monospace;">Mixpanel</span></div>
+    <div class="card"><h2>Permissions Requested (AndroidManifest.xml)</h2><span style="display:inline-block;background:#2b6cb015;color:#2b6cb0;border:1px solid #2b6cb040;border-radius:4px;padding:3px 10px;margin:3px;font-size:13px;font-family:monospace;">INTERNET</span><span style="display:inline-block;background:#2b6cb015;color:#2b6cb0;border:1px solid #2b6cb040;border-radius:4px;padding:3px 10px;margin:3px;font-size:13px;font-family:monospace;">ACCESS_WIFI_STATE</span><span style="display:inline-block;background:#2b6cb015;color:#2b6cb0;border:1px solid #2b6cb040;border-radius:4px;padding:3px 10px;margin:3px;font-size:13px;font-family:monospace;">ACCESS_NETWORK_STATE</span><span style="display:inline-block;background:#2b6cb015;color:#2b6cb0;border:1px solid #2b6cb040;border-radius:4px;padding:3px 10px;margin:3px;font-size:13px;font-family:monospace;">SCHEDULE_EXACT_ALARM</span><span style="display:inline-block;background:#2b6cb015;color:#2b6cb0;border:1px solid #2b6cb040;border-radius:4px;padding:3px 10px;margin:3px;font-size:13px;font-family:monospace;">WAKE_LOCK</span><span style="display:inline-block;background:#2b6cb015;color:#2b6cb0;border:1px solid #2b6cb040;border-radius:4px;padding:3px 10px;margin:3px;font-size:13px;font-family:monospace;">RECEIVE_BOOT_COMPLETED</span><span style="display:inline-block;background:#2b6cb015;color:#2b6cb0;border:1px solid #2b6cb040;border-radius:4px;padding:3px 10px;margin:3px;font-size:13px;font-family:monospace;">FOREGROUND_SERVICE</span><span style="display:inline-block;background:#2b6cb015;color:#2b6cb0;border:1px solid #2b6cb040;border-radius:4px;padding:3px 10px;margin:3px;font-size:13px;font-family:monospace;">RECEIVE</span><span style="display:inline-block;background:#2b6cb015;color:#2b6cb0;border:1px solid #2b6cb040;border-radius:4px;padding:3px 10px;margin:3px;font-size:13px;font-family:monospace;">POST_NOTIFICATIONS</span><span style="display:inline-block;background:#2b6cb015;color:#2b6cb0;border:1px solid #2b6cb040;border-radius:4px;padding:3px 10px;margin:3px;font-size:13px;font-family:monospace;">BILLING</span><span style="display:inline-block;background:#2b6cb015;color:#2b6cb0;border:1px solid #2b6cb040;border-radius:4px;padding:3px 10px;margin:3px;font-size:13px;font-family:monospace;">BIND_GET_INSTALL_REFERRER_SERVICE</span><span style="display:inline-block;background:#2b6cb015;color:#2b6cb0;border:1px solid #2b6cb040;border-radius:4px;padding:3px 10px;margin:3px;font-size:13px;font-family:monospace;">AD_ID</span></div>
+  </div>
+  <footer>CIS 5370 · Project 2 – Medical Android App Data Leakage Analysis · FIU</footer>
+</body>
+</html>
